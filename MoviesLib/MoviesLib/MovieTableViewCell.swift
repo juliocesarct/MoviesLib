@@ -10,6 +10,11 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var ivPoster: UIImageView!
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var lbSummary: UILabel!
+    @IBOutlet weak var lbRating: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +24,13 @@ class MovieTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func prepare(with movie: Movie){
+        ivPoster.image = UIImage(named: movie.image)
+        lbTitle.text = "\(movie.title)"
+        lbRating.text = "⭐️\(movie.rating)"
+        lbSummary.text = "\(movie.summary)"
     }
 
 }

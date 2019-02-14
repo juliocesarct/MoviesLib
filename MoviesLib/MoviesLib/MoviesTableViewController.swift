@@ -42,14 +42,13 @@ class MoviesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let movie = movies[indexPath.row].title
-        let dur = movies[indexPath.row].duration
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as?MovieTableViewCell
+       
+        let movie = movies[indexPath.row]
+    
+        cell?.prepare(with: movie)
         
-        cell.textLabel?.text = movie
-        cell.detailTextLabel?.text = dur
-        
-        return cell
+        return cell!
     }
     
 

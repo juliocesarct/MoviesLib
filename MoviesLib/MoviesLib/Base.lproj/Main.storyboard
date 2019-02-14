@@ -23,7 +23,7 @@
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="FUG-aj-0Kr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="FUG-aj-0Kr" customClass="MovieTableViewCell" customModule="MoviesLib" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FUG-aj-0Kr" id="KBb-Uj-j2u">
@@ -58,6 +58,12 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ivPoster" destination="yrg-Pm-BIU" id="zNN-EV-ut7"/>
+                                    <outlet property="lbRating" destination="9HV-xS-WdH" id="nTy-Rj-KR9"/>
+                                    <outlet property="lbSummary" destination="k4Y-54-Qbv" id="tMH-80-9Gs"/>
+                                    <outlet property="lbTitle" destination="RUk-ln-nz9" id="9d2-we-IrS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
