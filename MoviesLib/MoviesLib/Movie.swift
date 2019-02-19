@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Movie: Codable {
+/*struct Movie: Codable {
     let title: String
     let categories: String
     let duration: String
@@ -19,4 +19,4 @@ struct Movie: Codable {
     //enum CodingKeys:String, CodingKey{
     //    case
     //}
-}
+}*/
